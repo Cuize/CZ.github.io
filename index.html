@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Webpage </title>
   <style>
     body {
@@ -9,6 +10,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
+      color: #333;
     }
     header {
       background-color: #0044cc;
@@ -29,20 +31,45 @@
     a {
       color: #0044cc;
     }
+
+    .container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+  }
+  #galleries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  #galleries img {
+    width: 32%; /* Adjusted to take up roughly one third of the container width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 5px; /* Optional: for rounded corners */
+  }
+  @media (max-width: 600px) {
+    #galleries img {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
   </style>
 </head>
 <body>
-
+  <div class="container">
   <!-- Header -->
   <header>
-    <h1>CZ Han</h1>
+    <p>CZ Han</p>
     <p>Research Scientist | Machine Learning | Recommendation Systems | Generative AI</p>
   </header>
 
   <!-- Introduction -->
   <section id="introduction">
     <h2>Introduction</h2>
-    <p>Just a random guy on the internet who loves learning and thinking. I like to try new things. Some of the current interest/hobby: generative AI, learning languages, algorithmic challenge, Chinese Chess and playing with my dogs :) 两个口号： 1. 大道至简，快乐地做有意思（有用）的科研 2. 工作是为了更好的生活</p>
+    <p>Just a random guy on the internet who loves learning and thinking. I like to try new things. Some of the current interest/hobby: generative AI, learning languages, algorithmic challenge, Chinese Chess and playing with my dogs :) 两个口号： 1. 大道至简，快乐地做有意思（有用）的科研 2. 工作是为了更好的生活. My CV: <a href="My_CV.pdf" download="my_cv.pdf">Download CV</a></p>
   </section>
 
   <!-- Research Interests -->
@@ -72,6 +99,18 @@
       <li><a href="https://leetcode.com/hancuizeaux/">Leetcode</a></li>
     </ul>
   </section>
+
+    <!-- Galleries Section -->
+  <section id="galleries">
+    <h2>Galleries</h2>
+    <img src="pics/dog1.jpg" >
+    <img src="pics/dog2.jpg" >
+    <img src="pics/dog3.JPG" >
+    <img src="pics/dog4.JPG" >
+    <img src="pics/dog5.JPG" >
+    <img src="pics/dog6.JPG" >
+  </section>
+</div>
 
 </body>
 </html>
